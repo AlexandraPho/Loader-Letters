@@ -1,0 +1,55 @@
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #F1EFE7;
+  }
+
+  .loader {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: -12px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: reveal 1s forwards ease-in-out;
+  }
+
+  .loader .letter:nth-child(1) { animation-delay: 0.5s; }
+  .loader .letter:nth-child(2) { animation-delay: 1s; }
+  .loader .letter:nth-child(3) { animation-delay: 1.5s; }
+  .loader .letter:nth-child(4) { animation-delay: 2s; }
+
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .phrase {
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 8px;
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 22px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealPhrase 1s forwards ease-in-out 3s;
+  }
+
+  @keyframes revealPhrase {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
